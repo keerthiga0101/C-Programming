@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, marks[50], max, topper;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("Enter marks of student %d: ", i + 1);
+        scanf("%d", &marks[i]);
+    }
+
+    max = marks[0];
+    topper = 1;
+
+    for (i = 1; i < n; i++) {
+        if (marks[i] > max) {
+            max = marks[i];
+            topper = i + 1;
+        }
+    }
+
+    printf("Topper is student %d with marks %d", topper, max);
+
+    return 0;
+}
