@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+struct book {
+    int id;
+    char name[20];
+};
+
+int main() {
+    struct book b;
+
+    printf("Enter book id and name: ");
+    scanf("%d %s", &b.id, b.name);
+
+    printf("Book ID: %d\nBook Name: %s", b.id, b.name);
+    return 0;
+}
